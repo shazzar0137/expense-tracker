@@ -1,8 +1,9 @@
+/* === Base Styles === */
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5; 
+  background-color: #f5f5f5;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -10,15 +11,15 @@ body {
 }
 
 
+/* === App Layout === */
 .app-container {
-  max-width: 1200px;
   width: 100%;
+  max-width: 1200px;
   margin: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  overflow: hidden; 
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-
 
 .app {
   display: flex;
@@ -26,10 +27,11 @@ body {
 }
 
 
+/* === Sidebar === */
 .sidebar {
   width: 250px;
   padding: 20px;
-  background-color: #e8ecef; 
+  background-color: #e8ecef;
   border-right: 1px solid #ddd;
 }
 
@@ -40,10 +42,11 @@ body {
 }
 
 
+/* === Main Content === */
 .main-content {
   flex: 1;
   padding: 20px;
-  background-color: #fff; 
+  background-color: #fff;
 }
 
 .main-content h1 {
@@ -53,6 +56,7 @@ body {
 }
 
 
+/* === Form === */
 form {
   display: flex;
   flex-direction: column;
@@ -84,12 +88,12 @@ form input:focus {
 
 form button {
   padding: 10px;
+  font-size: 0.9rem;
   background-color: #007bff;
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 0.9rem;
   text-transform: uppercase;
 }
 
@@ -98,6 +102,7 @@ form button:hover {
 }
 
 
+/* === Search Bar === */
 .search-bar {
   position: relative;
   margin-bottom: 20px;
@@ -116,7 +121,6 @@ form button:hover {
   border-color: #007bff;
 }
 
-
 .search-bar::before {
   content: '🔍';
   position: absolute;
@@ -128,16 +132,18 @@ form button:hover {
 }
 
 
+/* === Table === */
 table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9rem;
 }
 
-th, td {
-  border: 1px solid #ddd;
+th,
+td {
   padding: 10px;
   text-align: left;
+  border: 1px solid #ddd;
 }
 
 th {
@@ -151,22 +157,22 @@ td {
   color: #555;
 }
 
-
 tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
 
+/* === Buttons in Table === */
 th button,
 td button {
   padding: 5px 10px;
-  background-color: #007bff;
-  color: white;
+  font-size: 0.8rem;
+  color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 0.8rem;
   margin-left: 5px;
+  background-color: #007bff;
 }
 
 th button:hover,
@@ -174,9 +180,8 @@ td button:hover {
   background-color: #0056b3;
 }
 
-
 td button {
-  background-color: #dc3545; 
+  background-color: #dc3545;
 }
 
 td button:hover {
@@ -184,6 +189,7 @@ td button:hover {
 }
 
 
+/* === Responsive === */
 @media (max-width: 768px) {
   .app {
     flex-direction: column;
@@ -207,7 +213,8 @@ td button:hover {
     font-size: 0.8rem;
   }
 
-  th, td {
+  th,
+  td {
     padding: 8px;
   }
 }
