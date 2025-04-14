@@ -7,7 +7,7 @@ export default function App() {
   const [expenses, setExpenses] = useState([
     {
       id: 1,
-      name: "Lunch",
+      expensename: "Lunch",
       description: "Yesterday's Lunch",
       category: "Food",
       amount: 120,
@@ -15,7 +15,7 @@ export default function App() {
     },
     {
       id: 2,
-      name: "KPLC Tokens",
+      expensename: "KPLC Tokens",
       description: "Power Tokens",
       category: "Utilities",
       amount: 2000,
@@ -23,7 +23,7 @@ export default function App() {
     },
     {
       id: 3,
-      name: "Buy Shoes",
+      expensename: "Buy Shoes",
       description: "Add to my shoe collection",
       category: "Personal",
       amount: 5000,
@@ -31,7 +31,7 @@ export default function App() {
     },
     {
       id: 4,
-      name: "Buy Book",
+      expensename: "Buy Book",
       description: "Add to my book collection",
       category: "Personal",
       amount: 1500,
