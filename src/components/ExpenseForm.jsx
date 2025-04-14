@@ -8,13 +8,17 @@ const ExpenseForm = ({ onAddExpense }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (expenseName && description && category && amount) {
+
+    const isValid = expenseName && description && category && amount;
+    if (isValid) {
       onAddExpense({
         expenseName,
         description,
         category,
         amount: parseFloat(amount),
       });
+
+      // Clear form inputs
       setExpenseName('');
       setDescription('');
       setCategory('');
@@ -33,6 +37,7 @@ const ExpenseForm = ({ onAddExpense }) => {
           required
         />
       </div>
+
       <div>
         <label>Description</label>
         <input
@@ -42,6 +47,7 @@ const ExpenseForm = ({ onAddExpense }) => {
           required
         />
       </div>
+
       <div>
         <label>Category</label>
         <input
@@ -51,6 +57,7 @@ const ExpenseForm = ({ onAddExpense }) => {
           required
         />
       </div>
+
       <div>
         <label>Amount</label>
         <input
@@ -61,6 +68,7 @@ const ExpenseForm = ({ onAddExpense }) => {
           required
         />
       </div>
+
       <button type="submit">Submit</button>
     </form>
   );
